@@ -1,0 +1,77 @@
+{
+  "acceptedResumeTypes": [
+    "html",
+    "text",
+    "txt",
+    "pdf",
+    "doc",
+    "docx",
+    "rtf",
+    "odt"
+  ],
+  "companyName": "WeMatch Job-Portal",
+  "companyLogoPath": "assets/wematch-logo.svg",
+  "companyUrl": "wematch.de",
+  "careersUrl": "",
+  "defaultLocale": "de",
+  "supportedLocales": [
+    "en-US",
+    "de"
+  ],
+  "minUploadSize": 4096,
+  "maxRelatedJobs": 5,
+  "maxUploadSize": 5242880,
+  "service": {
+    "batchSize": 500,
+    "corpToken": "8WY9C4",
+    "port": null,
+    "swimlane": "70",
+    "fields": [
+      "id",
+      "title",
+      "publishedCategory(id,name)",
+      "address(city,state,zip)",
+      "employmentType",
+      "dateLastPublished",
+      "publicDescription",
+      "isOpen",
+      "isPublic",
+      "isDeleted",
+      "publishedZip",
+      "salary",
+      "salaryUnit"
+    ],
+    "jobInfoChips": [
+      "employmentType",
+      {
+        "type": "mediumDate",
+        "field": "dateLastPublished"
+      }
+    ],
+    "showCategory": true,
+    "keywordSearchFields": ["publicDescription", "title"]
+  },
+  "additionalJobCriteria": {
+    "field": "employmentType",
+    "values": ["Permanent", "Contract"],
+    "sort": "-dateLastPublished"
+  },
+  "integrations": {
+    "googleAnalytics": {
+      "trackingId": ""
+    },
+    "googleSiteVerification": {
+      "verificationCode": ""
+    }
+  },
+  "eeoc": {
+    "genderRaceEthnicity": false,
+    "veteran": false,
+    "disability": false
+  },
+  "privacyConsent": {
+    "consentCheckbox": true,
+    "sidebarLink": true,
+    "privacyPolicyUrl": "/privacy"
+  }
+}
