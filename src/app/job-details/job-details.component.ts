@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ElementRef, Renderer2 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SearchService } from '../services/search/search.service';
 import { NovoModalService } from 'novo-elements';
@@ -119,13 +119,13 @@ export class JobDetailsComponent implements OnInit {
     if (res.data && res.data.length > 0) {
       this.job = res.data[0];
       this.titleService.setTitle(this.job.title);
-      this.meta.updateTag({ name: 'og:title', content: this.job.title });
-      this.meta.updateTag({ name: 'titter:title', content: this.job.title });
-      this.meta.updateTag({ name: 'og:image', content: SettingsService.settings.companyLogoPath });
-      this.meta.updateTag({ name: 'og:url', content: `${SettingsService.urlRoot}${this.router.url}` });
-      this.meta.updateTag({ name: 'og:description', content: this.job.publicDescription});
-      this.meta.updateTag({ name: 'twitter:description', content: this.job.publicDescription});
-      this.meta.updateTag({ name: 'description', content: this.job.publicDescription});
+      this.meta.updateTag({name: 'og:title', content: this.job.title});
+      this.meta.updateTag({name: 'titter:title', content: this.job.title});
+      this.meta.updateTag({name: 'og:image', content: SettingsService.settings.companyLogoPath});
+      this.meta.updateTag({name: 'og:url', content: `${SettingsService.urlRoot}${this.router.url}`});
+      this.meta.updateTag({name: 'og:description', content: this.job.publicDescription});
+      this.meta.updateTag({name: 'twitter:description', content: this.job.publicDescription});
+      this.meta.updateTag({name: 'description', content: this.job.publicDescription});
       this.loading = false;
     } else {
       this.serverResponse.setNotFound();
@@ -135,5 +135,4 @@ export class JobDetailsComponent implements OnInit {
       }).onClosed.then(this.goToJobList.bind(this));
     }
   }
-
 }

@@ -1,10 +1,54 @@
 /* add custom CSS here */
 
 /* Standard Customized */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+/* jost-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/jost-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/jost-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/jost-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/jost-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/jost-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+  font-family: 'Jost',sans-serif!important;
+}
 
 body {
-  font-family: 'Jost',sans-serif;
+  font-family: 'Jost',sans-serif!important;
 }
 
 .category {
@@ -28,10 +72,6 @@ body {
   background: #001f25!important;
 }
 
-.job-card {
-  background: white!important;
-}
-
 .job-container {
   background: #001f25!important;
 }
@@ -46,6 +86,7 @@ body {
 
 .open-positions-text {
   color: white!important;
+  font-size: 1.4em!important;
 }
 
 app-sidebar {
@@ -66,14 +107,16 @@ app-sidebar {
 
 .job-description-text p {
   font-size: 1.2em!important;
-}
-
-.job-title {
-  font-size: 2.5em!important;
+  font-weight: 300!important;
 }
 
 .job-description-text li {
   font-size: 1.2em!important;
+  font-weight: 300!important;
+}
+
+.job-title {
+  font-size: 2.5em!important;
 }
 
 [field="address(state)"] {
@@ -88,27 +131,18 @@ a:hover {
   color: #F2B724!important;
 }
 
-button:hover {
-  background: #F2B724!important;
-  color: black!important;
-}
-
 [icon="bhi-print"] {
   display:none!important;
 }
 
-.job-card:hover {
-  box-shadow: -1px 1px 5px 2px white!important;
-}
-
 .bhi-checkbox-filled {
-  color: #F2B724!important;
+  color: white!important;
 }
 
-::selection {
+/*::selection {
   background: #F2B724!important;
   opacity: 0.5;
-}
+}*/
 
 .header-title {
   font-size: 16px!important;
@@ -144,11 +178,13 @@ a {
 
 button {
   color: #007772 !important;
+  font-weight: 500!important;
 }
 
 button[color=positive] {
   background-color: #007772 !important;
   color: #fff!important;
+  font-weight: 500!important;
 }
 
 button[color=positive]:hover {
@@ -158,19 +194,25 @@ button[color=positive]:hover {
 button[theme=primary] {
   background: #007772 !important;
   color: #fff!important;
+  font-weight: 500!important;
 }
 
 button[theme=primary]:hover {
-  background-color: #F2B724!important;
+  background-color: white!important;
   color: black!important;
 }
 
 button[theme=dialogue] {
   background: transparent!important;
+  font-weight: 500!important;
 }
 
 button[theme=dialogue]:hover {
-  background-color: #F2B724!important;
+  background-color: white!important;
+}
+
+.bhi-times:hover {
+  color: black!important;
 }
 
 .link {
@@ -179,4 +221,153 @@ button[theme=dialogue]:hover {
 
 .novo-file-input .file-input-group .active :hover {
   border: 2px dashed #007772 !important;
+}
+
+li {
+  color: #fff!important;
+}
+
+h1 {
+  font-weight: 700!important;
+  font-size: 2.3em!important;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-weight: 700!important;
+    font-size: 1.8em!important;
+  }
+
+  img {
+    max-width: 100%!important;
+  }
+}
+
+novo-search {
+  padding: 32px 17px 17px!important;
+}
+
+/*Datenschutz und Impressum Seite*/
+.content {
+  margin-right: 12rem!important;
+}
+
+.content h2 {
+  font-size: 3.5em!important;
+  font-weight: 700!important;
+}
+
+.content h3 {
+  font-size: 3.5em!important;
+  padding: 0!important;
+}
+
+.content p {
+  font-size: 1.2em!important;
+  font-weight: 300!important;
+}
+
+.content li {
+  font-size: 1.2em!important;
+  font-weight: 300!important;
+}
+
+h6 {
+  font-size: 1.3em!important;
+}
+
+.zuruck-button {
+  margin-top: 2.5em!important;
+}
+
+/*Impressum und Datenschutz Links*/
+.privacy-policy-link {
+  color: white!important;
+  font-weight:400!important;
+}
+
+.privacy-policy-link:hover {
+  color: #c7c8c9!important;
+}
+
+/*Job-Detail-Seite: Share-Button*/
+[icon="bhi-share"] {
+  color: white!important;
+}
+
+button:hover {
+  color: black!important;
+  background-color: white!important;
+}
+
+/*Job-Card Corporate Design*/
+
+/*.job-card {
+  background: white!important;
+}
+
+.job-card:hover {
+  box-shadow: -1px 1px 5px 2px white!important;
+}*/
+
+.job-card {
+  border-bottom: 2px solid white !important;
+}
+
+.job-card:hover {
+  background: rgba(255, 255, 255, 0.3)!important;
+}
+
+.category {
+  color: white!important;
+  font-size: 17px!important;
+  margin-top: 10px!important;
+}
+
+.description {
+  color: white!important;
+}
+
+h6 > a {
+  color: white!important;
+  font-size: 1.4em!important;
+}
+
+h6 > a:hover {
+  color: #c7c8c9!important;
+}
+
+novo-list-item {
+  background-color: transparent!important;
+}
+
+/* Suchzeile Customizing */
+.bhi-search:hover {
+  color: black!important;
+}
+
+button[theme=fab][icon=bhi-search] {
+  height: 37px!important;
+}
+/* Anpassung WeMatch Logo */
+
+.bullhorn {
+  margin-top: 20px!important;
+}
+
+/* Bewerben-Popup Customizing */
+
+[for="consent"] > .bhi-checkbox-filled {
+  color: #007772!important;
+}
+
+[data-automation-id="apply-modal-save"] {
+  border: 1px solid #007772!important
+}
+
+[data-automation-id="apply-modal-save"]:hover {
+  border: 1px solid black!important;
+  background-color: #007772!important;
+  color: #fff!important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px!important;
 }

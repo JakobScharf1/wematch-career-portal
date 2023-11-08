@@ -9,23 +9,32 @@
     "rtf",
     "odt"
   ],
-  "companyName": "WeMatch Job-Portal",
-  "companyLogoPath": "assets/wematch-logo.svg",
-  "companyUrl": "wematch.de",
+  "companyName": "[ COMPANY NAME HERE ]",
+  "companyLogoPath": "",
+  "companyUrl": "",
   "careersUrl": "",
-  "defaultLocale": "de",
+  "defaultLocale": "en-US",
   "supportedLocales": [
-    "en-US",
-    "de"
+      "en-US",
+      "en-GB",
+      "en",
+      "fr-FR",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "nl",
+      "ru",
+      "zh-CN"
   ],
   "minUploadSize": 4096,
   "maxRelatedJobs": 5,
   "maxUploadSize": 5242880,
   "service": {
     "batchSize": 500,
-    "corpToken": "8WY9C4",
+    "corpToken": "[ CORP TOKEN HERE ]",
     "port": null,
-    "swimlane": "70",
+    "swimlane": "[ SWIMLANE HERE ]",
     "fields": [
       "id",
       "title",
@@ -49,11 +58,16 @@
       }
     ],
     "showCategory": true,
-    "keywordSearchFields": ["publicDescription", "title"]
+    "keywordSearchFields": [
+      "publicDescription",
+      "title"
+    ]
   },
   "additionalJobCriteria": {
-    "field": "employmentType",
-    "values": ["Permanent", "Contract"],
+    "field": "[ FILTER FIELD HERE ]",
+    "values": [
+      "[ FILTER VALUE HERE ]"
+    ],
     "sort": "-dateLastPublished"
   },
   "integrations": {
@@ -70,8 +84,8 @@
     "disability": false
   },
   "privacyConsent": {
-    "consentCheckbox": true,
-    "sidebarLink": true,
+    "consentCheckbox": false,
+    "sidebarLink": false,
     "privacyPolicyUrl": "/privacy"
   }
 }

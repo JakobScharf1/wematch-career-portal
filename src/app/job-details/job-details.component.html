@@ -2,7 +2,9 @@
 <app-structured-seo *ngIf="!loading" [jobData]="job"></app-structured-seo>
 <div class="background" *ngIf="!loading">
     <div class="job-container" [ngClass]="{'safari-scroll': isSafariAgent}">
-        <button theme="dialogue" (click)="goToJobList()" icon="previous" side="left" data-automation-id="back-button">{{ 'BACK'   | translate }}</button>
+        <div class="button-container">
+            <button theme="dialogue" (click)="goToJobList()" icon="previous" side="left" data-automation-id="back-button">{{ 'BACK'   | translate }}</button>
+        </div>
         <div class="job-header">
             <span class="job-title">{{ job.title }}</span>
             <br/>
