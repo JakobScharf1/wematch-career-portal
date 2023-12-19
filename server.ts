@@ -78,13 +78,14 @@ export function app(): express.Express {
 }
 
 function run(): void {
-  const port = process.env.PORT || 4000;
+  const port: number = parseInt(process.env.PORT, 10) || 3000;
+  const host: string = process.env.HOST || 'career-portal.wematch-intern.de';
 
   // Start up the Node server
   const server = app();
-  server.listen(port, () => {
+  server.listen(port, host, () => {
     // tslint:disable-next-line: no-console
-    console.log(`Node Express server listening on http://localhost:${port}`);
+    console.log(`Node Express server listening on http://${host}:${port}`);
   });
 }
 

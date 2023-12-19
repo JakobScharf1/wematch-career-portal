@@ -38,6 +38,7 @@ import { TranslationLoader } from './services/localization/loader';
 import { AppRoutingModule } from './app-routing.module';
 import { InfoChipsComponent } from './components/info-chips/info-chips.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export function initSettings(settings: SettingsService): () => Promise<void> {
   return () => settings.load();
@@ -85,6 +86,10 @@ export function initSettings(settings: SettingsService): () => Promise<void> {
       useFactory: initSettings,
       deps: [SettingsService],
       multi: true,
+    },
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
     },
     SettingsService,
     SearchService,

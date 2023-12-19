@@ -72,10 +72,6 @@ body {
   background: #001f25!important;
 }
 
-.job-card {
-  background: white!important;
-}
-
 .job-container {
   background: #001f25!important;
 }
@@ -139,12 +135,8 @@ a:hover {
   display:none!important;
 }
 
-.job-card:hover {
-  box-shadow: -1px 1px 5px 2px white!important;
-}
-
 .bhi-checkbox-filled {
-  color: #F2B724!important;
+  color: white!important;
 }
 
 /*::selection {
@@ -219,6 +211,10 @@ button[theme=dialogue]:hover {
   background-color: white!important;
 }
 
+.bhi-times:hover {
+  color: black!important;
+}
+
 .link {
   color: #007772 !important;
 }
@@ -234,6 +230,21 @@ li {
 h1 {
   font-weight: 700!important;
   font-size: 2.3em!important;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-weight: 700!important;
+    font-size: 1.8em!important;
+  }
+
+  img {
+    max-width: 100%!important;
+  }
+}
+
+novo-search {
+  padding: 32px 17px 17px!important;
 }
 
 /*Datenschutz und Impressum Seite*/
@@ -269,10 +280,6 @@ h6 {
   margin-top: 2.5em!important;
 }
 
-.zuruck-button:hover {
-  color: black!important;
-}
-
 /*Impressum und Datenschutz Links*/
 .privacy-policy-link {
   color: white!important;
@@ -291,4 +298,101 @@ h6 {
 button:hover {
   color: black!important;
   background-color: white!important;
+}
+
+/*Job-Card Corporate Design*/
+
+/*.job-card {
+  background: white!important;
+}
+
+.job-card:hover {
+  box-shadow: -1px 1px 5px 2px white!important;
+}*/
+
+.job-card {
+  border-bottom: 2px solid white !important;
+}
+
+.job-card:hover {
+  background: rgba(255, 255, 255, 0.3)!important;
+}
+
+.category {
+  color: white!important;
+  font-size: 17px!important;
+  margin-top: 10px!important;
+}
+
+.description {
+  color: white!important;
+}
+
+h6 > a {
+  color: white!important;
+  font-size: 1.4em!important;
+}
+
+h6 > a:hover {
+  color: #c7c8c9!important;
+}
+
+novo-list-item {
+  background-color: transparent!important;
+}
+
+/* Suchzeile Customizing */
+.bhi-search:hover {
+  color: black!important;
+}
+
+button[theme=fab][icon=bhi-search] {
+  height: 37px!important;
+}
+/* Anpassung WeMatch Logo */
+
+.bullhorn {
+  margin-top: 20px!important;
+}
+
+/* Bewerben-Popup Customizing */
+
+[for="consent"] > .bhi-checkbox-filled {
+  color: #007772!important;
+}
+
+[data-automation-id="apply-modal-save"] {
+  border: 1px solid #007772!important
+}
+
+[data-automation-id="apply-modal-save"]:hover {
+  border: 1px solid black!important;
+  background-color: #007772!important;
+  color: #fff!important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px!important;
+}
+
+[_nghost-serverApp-c104] section[_ngcontent-serverapp-c104] {
+  height: calc(100vh - 260px)!important;
+}
+
+@media (max-height: 800px), only screen and (max-width: 768px)/* and (min-height: 700px)*/ {
+  [_nghost-serverApp-c104] section[_ngcontent-serverApp-c104] {
+    max-width: 570px!important;
+    padding-top: 5px!important;
+  }
+}
+
+@media (max-width: 480px) {
+  .chip {
+    display:none!important;
+  }
+}
+
+.novo-control-inner-input-container {
+  max-height: 13em!important;
+}
+
+app-sidebar novo-check-list {
+  max-height: 13em!important;
 }
