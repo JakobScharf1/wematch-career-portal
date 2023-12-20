@@ -9,7 +9,6 @@ export function generateSitemap(appConfig: ISettings, res: any, req: any): any {
   let jobsUrl: string = `https://public-rest${appConfig.service.swimlane}.bullhornstaffing.com/rest-services/${appConfig.service.corpToken}/search/JobOrder?query=(isOpen:1%20AND%20isDeleted:0)${getQuery(appConfig)}&fields=id,title,address(city,state,zip),employmentType,dateLastPublished,publicDescription&count=500&sort=-dateLastPublished&start=0`;
   let body: string = '';
   get(jobsUrl, (response: IncomingMessage) => {
-
     response.on('data', function (chunk: any): any {
       body += chunk;
     });
@@ -21,23 +20,23 @@ export function generateSitemap(appConfig: ISettings, res: any, req: any): any {
         sitemapUrls.push({
           name: 'url',
           children: [
-            { name: 'loc', text: `${req.protocol}://${req.hostname}${req.originalUrl.replace('/sitemap', '/jobs')}/${job.id}` },
-            { name: 'lastmod', text: `${postDate.getFullYear()}-${('0' + (postDate.getMonth() + 1)).slice(-2)}-${('0' + postDate.getDate()).slice(-2)}` },
+            {name: 'loc', text: `${req.protocol}://${req.hostname}${req.originalUrl.replace('/sitemap', '/jobs')}/${job.id}`},
+            {name: 'lastmod', text: `${postDate.getFullYear()}-${('0' + (postDate.getMonth() + 1)).slice(-2)}-${('0' + postDate.getDate()).slice(-2)}`},
           ],
         });
       });
 
       res.send(`<?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> ${jsonxml(sitemapUrls)}</urlset>`);
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> ${jsonxml(sitemapUrls)}</urlset>`);
     });
   });
-
 }
 
 export function generateRss(appConfig: ISettings, res: any, req: any): any {
   let jobListings: any = {
     children: [], title: `${appConfig.companyName} Job Opportunities`, link: `${req.protocol}://${req.hostname}${req.originalUrl}`, pubDate: new Date().toUTCString(), ttl: 5};
   let jobsUrl: string = `https://public-rest${appConfig.service.swimlane}.bullhornstaffing.com/rest-services/${appConfig.service.corpToken}/search/JobOrder?query=(isOpen:1%20AND%20isDeleted:0)${getQuery(appConfig)}&fields=id,title,address(city,state,zip),employmentType,dateLastPublished,publicDescription&count=500&sort=-dateLastPublished&start=0`;
+  
   let body: string = '';
   get(jobsUrl, (response: IncomingMessage) => {
 
