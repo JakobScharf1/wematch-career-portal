@@ -11,7 +11,7 @@ import { createWindow } from 'domino';
 import { ISettings } from './src/app/typings/settings';
 import { generateRss, generateSitemap } from './generateXml';
 
-const DIST_FOLDER: string = join(process.cwd(), 'dist/career-portal/browser');
+const DIST_FOLDER: string = join(process.cwd(), '../browser');
 let appConfig: ISettings = JSON.parse(readFileSync(join(DIST_FOLDER, 'app.json')).toString());
 
 if (process.env.COMPANY_NAME) {
@@ -35,7 +35,7 @@ if (process.env.COMPANY_NAME) {
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server: any = express();
-  const distFolder: any = join(process.cwd(), 'dist/career-portal/browser');
+  const distFolder: any = join(process.cwd(), '../browser');
   const indexHtml: any = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
   const template: any = readFileSync(join(distFolder, 'index.html')).toString();
   const win: Window = createWindow(template);
@@ -79,7 +79,7 @@ export function app(): express.Express {
 
 function run(): void {
   const port: number = parseInt(process.env.PORT, 10) || 3000;
-  const host: string = process.env.HOST || 'career-portal.wematch-intern.de';
+  const host: string = process.env.HOST || 'matchmaker.wematch-intern.de';
 
   // Start up the Node server
   const server = app();

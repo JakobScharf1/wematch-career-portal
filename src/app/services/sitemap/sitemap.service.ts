@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class SiteMapService {
-    private baseUrl = 'http://localhost:8000';
+    private baseUrl = 'https://career-portal.wematch-intern.de';
     
     constructor(private http: HttpClient) { }
         
