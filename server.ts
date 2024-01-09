@@ -79,7 +79,7 @@ export function app(): express.Express {
 
 function run(): void {
   const port: number = parseInt(process.env.PORT, 10) || 3000;
-  const host: string = process.env.HOST || 'matchmaker.wematch-intern.de';
+  const host: string = process.env.HOST || 'career-portal.wematch-intern.de';
 
   // Start up the Node server
   const server = app();
